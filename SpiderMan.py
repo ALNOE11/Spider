@@ -487,7 +487,7 @@ def pilih_super():
              Checkpoint ID Open After 7 Days
 
 •\033[1;93m◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•.
-: \033[1;96m .....lovehacker  Kali.linux....... \033[1;93m :
+: \033[1;96m ....lovehacker  Kali.linux....... \033[1;93m :
 •\033[1;93m◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•.' 
                 WhatsApp Num
               \033[1;96m +923094161457"""

